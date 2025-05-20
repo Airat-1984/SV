@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Я-Тестировщик</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16"href="favicon-16x16.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопка выбора языка -->
+        <select class="lang-switcher" onchange="switchLanguage(this.value)">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+        </select>
+
+        <!-- Русская версия -->
+        <div id="ru-content" class="lang-content active">
+            <h1>Айрат Галиуллин</h1>
+            <img src="777.jpeg" alt="Мое фото" class="photo">
+            <h2>Обо мне</h2>
+            <p>Привет! Я QA-тестировщик с опытом работы более 1,5 лет, при этом тестирую жизнь более 40 лет, так что общий стаж в тестировании у меня значительный. Хотите чтобы у вас работал опытный тестировщик - я готов, только напишите!</p>
+            <h2>Контакты</h2>
+            <ul class="contact">
+                <li>📧 Email: ajr.galiullin2016@yandex.ru</li>
+                <li>📱 Телефон: +7 (917) 874-18-94</li>
+            </ul>
+        </div>
+
+        <!-- Английская версия -->
+        <div id="en-content" class="lang-content">
+            <h1>Airat Galiullin</h1>
+            <img src="777.jpeg" alt="My photo" class="photo">
+            <h2>About Me</h2>
+            <p>Hi! I am a QA tester with over 1.5 years of experience, and I have been testing life for over 40 years, so my overall experience in testing is low. If you want an experienced tester to work for you, I am ready, but only by appointment!</p>
+            <h2>Contacts</h2>
+            <ul class="contact">
+                <li>📧 Email: ajr.galiullin2016@yandex.ru</li>
+                <li>📱 Phone: +7 (917) 874-18-94</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Функция переключения языка
+        function switchLanguage(lang) {
+            // Скрываем все языковые блоки
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Показываем выбранный язык
+            document.getElementById(lang + '-content').classList.add('active');
+        }
+    </script>
+</body>
+</html>
